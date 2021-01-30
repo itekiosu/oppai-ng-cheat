@@ -2216,7 +2216,7 @@ int pp_std(ezpp_t ez) {
 		  case 1808605:
 			  ez->pp *= 0.7f;
 			  break;
-      case 1821147;
+      case 1821147:
         ez->pp *= 0.6f;
         break;
 		  default:
