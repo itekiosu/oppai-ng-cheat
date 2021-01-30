@@ -850,7 +850,7 @@ int p_metadata(ezpp_t ez, slice_t* line) {
     ez->creator = p_slicedup(ez, &value);
   } else if (!slice_cmp(&name, "Version")) {
     ez->version = p_slicedup(ez, &value);
-  } else if (!slice_cmp(&name, "BeatmapID")) { //
+  } else if (!slice_cmp(&name, "BeatmapID")) {
 		if (sscanf(value.start, "%d", &ez->beatmap_id) != 1) {
 			return ERR_SYNTAX;
 		}
