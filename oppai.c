@@ -2205,6 +2205,16 @@ int pp_std(ezpp_t ez) {
   }
 
   ez->pp *= final_multiplier;
+
+    if (ez->mods & MODS_RX) {
+  	  switch (ez->beatmap_id) {
+		  case 1808605:
+			  ez->pp *= 0.7f;
+			  break;
+		  default:
+			  break;
+		};
+  }
   ez->accuracy_percent = accuracy * 100.0f;
 
   return 0;
