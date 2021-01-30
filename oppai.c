@@ -2183,8 +2183,8 @@ int pp_std(ezpp_t ez) {
   if (ez->mods & MODS_RX) {
     /* aim & acc */
     ez->pp = (float)pow(
-      pow(ez->aim_pp, 1.15f) +
-      pow(ez->acc_pp, 1.13f),
+      pow(ez->aim_pp, 1.18f) +
+      pow(ez->acc_pp, 1.15f),
       1.0f / 1.1f
     );
   } else if (ez->mods & MODS_AP) {
