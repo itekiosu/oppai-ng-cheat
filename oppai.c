@@ -2225,13 +2225,13 @@ int pp_std(ezpp_t ez) {
   } else {
   	  switch (ez->beatmap_id) {
 		  case 1945175:
-			  ez->pp *= 0.8f;
+			  ez->pp *= 0.7f;
 			  break;
       case 1741498:
-        ez->pp *= 0.8f;
+        ez->pp *= 0.7f;
         break;
       case 2067473:
-        ez->pp *= 0.8f;
+        ez->pp *= 0.7f;
         break;
 		  default:
 			  break;
