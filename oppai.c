@@ -2222,6 +2222,20 @@ int pp_std(ezpp_t ez) {
 		  default:
 			  break;
 		};
+  } else {
+  	  switch (ez->beatmap_id) {
+		  case 1945175:
+			  ez->pp *= 0.8f;
+			  break;
+      case 1741498:
+        ez->pp *= 0.8f;
+        break;
+      case 2067473:
+        ez->pp *= 0.8f;
+        break;
+		  default:
+			  break;
+		};    
   }
   ez->accuracy_percent = accuracy * 100.0f;
 
