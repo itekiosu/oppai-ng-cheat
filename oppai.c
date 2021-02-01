@@ -2216,7 +2216,7 @@ int pp_std(ezpp_t ez) {
         ez->pp *= 1.02f;
       }*/
       if (ez->ar > 10.9 && accuracy >= 99.00) {
-        ez->pp *= 1.02f;
+        ez->pp *= 1.05f;
       }
   	  switch (ez->beatmap_id) {
 		  case 1808605:
