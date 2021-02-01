@@ -2212,6 +2212,12 @@ int pp_std(ezpp_t ez) {
   ez->pp *= final_multiplier;
 
     if (ez->mods & MODS_RX) {
+      if (ez->bpm > 330) {
+        ez->pp *= 1.02f;
+      }
+      if (ez->ar => 10.9 && ez->accuracy >= 99.00) {
+        ez->pp *= 1.02f;
+      }
   	  switch (ez->beatmap_id) {
 		  case 1808605:
 			  ez->pp *= 0.7f;
