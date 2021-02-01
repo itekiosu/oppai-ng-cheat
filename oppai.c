@@ -2215,7 +2215,7 @@ int pp_std(ezpp_t ez) {
       /*if (ez->bpm > 330) {
         ez->pp *= 1.02f;
       }*/
-      if (ez->ar > 10.9 && ez->accuracy >= 99.00) {
+      if (ez->ar > 10.9 && accuracy >= 99.00) {
         ez->pp *= 1.02f;
       }
   	  switch (ez->beatmap_id) {
