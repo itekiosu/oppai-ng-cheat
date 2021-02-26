@@ -2052,7 +2052,7 @@ int pp_std(ezpp_t ez) {
     0.4f * al_min(1.0f, nobjects_over_2k) +
     (ez->nobjects > 2000 ? (float)log10(nobjects_over_2k) * 0.5f : 0.0f)
   );
-  float miss_penality = pow(0.97f, ez->nmiss + ez->n50 * 0.35f)
+  float miss_penality = pow(0.97f, ez->nmiss + ez->n50 * 0.35f);
   float miss_penality_aim = 0.97 * pow(1 - pow((double)ez->nmiss / ez->nobjects, 0.775), ez->nmiss);
   float miss_penality_speed = 0.97 * pow(1 - pow((double)ez->nmiss / ez->nobjects, 0.775f), pow(ez->nmiss, 0.875f));
   float combo_break = (
