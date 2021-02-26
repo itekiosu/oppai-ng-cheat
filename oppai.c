@@ -2193,7 +2193,11 @@ int pp_std(ezpp_t ez) {
   }
 
   /* it's important to also consider accuracy difficulty when doing that */
-  ez->speed_pp *= 0.96f + (od_squared / 1600.0f);
+  if (ez->mods & MODS_RX) {
+    ez->speed_pp *= 0.96f + (od_squared / 1600.0f);
+  } else {
+    ez->speed_pp *= (float) pow(0.98f, ez->n50 < ez->nobjects / 500.0f ? 0.00 : ez->n50 - ez->nobjects / 500.0f);
+  }
 
   /* acc pp ---------------------------------------------------------- */
   /* arbitrary values tom crafted out of trial and error */
