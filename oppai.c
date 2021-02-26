@@ -2258,21 +2258,21 @@ int pp_std(ezpp_t ez) {
 		  default:
 			  break;
 		};
-  } /*else { comment: no more need for hidamari nerf since bancho pp system
+  } else {
   	  switch (ez->beatmap_id) {
 		  case 1945175:
-			  ez->pp *= 0.7f;
+			  ez->pp *= 0.75f;
 			  break;
       case 1741498:
-        ez->pp *= 0.7f;
+        ez->pp *= 0.75f;
         break;
       case 2067473:
-        ez->pp *= 0.7f;
+        ez->pp *= 0.75f;
         break;
 		  default:
 			  break;
 		};    
-  }*/
+  }
   ez->accuracy_percent = accuracy * 100.0f;
 
   return 0;
