@@ -2242,17 +2242,11 @@ int pp_std(ezpp_t ez) {
   ez->pp *= final_multiplier;
 
     if (ez->mods & MODS_RX) {
-      /*if (ez->bpm > 330) {
-        ez->pp *= 1.02f;
-      }*/
-      /*if (ez->ar > 10.9f && accuracy >= 99.00f) {
-        ez->pp *= 1.05f;
-      }*/
   	  switch (ez->beatmap_id) {
-		  case 1808605:
+		  case 1808605: /* louder than steel nerf (rx only) */
 			  ez->pp *= 0.7f;
 			  break;
-      case 1821147:
+      case 1821147: /* over the top nerf (rx only) */
         ez->pp *= 0.6f;
         break;
 		  default:
@@ -2260,13 +2254,13 @@ int pp_std(ezpp_t ez) {
 		};
   } else {
   	  switch (ez->beatmap_id) {
-		  case 1945175:
+		  case 1945175: /* keitaro's hidamari no uta nerf (vanilla only - relax pp system already serves this map justice) */
 			  ez->pp *= 0.75f;
 			  break;
-      case 1741498:
+      case 1741498: /* seto's hidamari no uta nerf (vanilla only - relax pp system already serves this map justice) */
         ez->pp *= 0.75f;
         break;
-      case 2067473:
+      case 2067473: /* cellina's hidamari no uta (remake ver) nerf (vanilla only - relax pp system already serves this map justice) */
         ez->pp *= 0.75f;
         break;
 		  default:
